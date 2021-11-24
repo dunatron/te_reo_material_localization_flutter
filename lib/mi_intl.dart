@@ -109,30 +109,30 @@ const miDateSymbols = {
   'MONTHS': <dynamic>[
     'Kohitātea', // january
     'Hui-tanguru', // february
-    'mars', // march
-    'april', // april
-    'mai', // may
-    'juni', // june
-    'juli', // july
-    'august', // august
-    'september', // september
-    'oktober', // october
-    'november', // november
-    'desember', // december
+    'Poutū-te-rangi', // march
+    'Pāenga-whāwhā', // april
+    'Haratua', // may
+    'Pīpiri', // june
+    'Hōngongoi', // july
+    'Here-turi-kōkā', // august
+    'Mahuru', // september
+    'Whiringa-ā-nuku', // october
+    'Whiringa-ā-rangi', // november
+    'Hakihea', // december
   ],
   'STANDALONEMONTHS': <dynamic>[
     'Kohitātea', // january
     'Hui-tanguru', // february
-    'mars', // march
-    'april', // april
-    'mai', // may
-    'juni', // june
-    'juli', // july
-    'august', // august
-    'september', // september
-    'oktober', // october
-    'november', // november
-    'desember', // december
+    'Poutū-te-rangi', // march
+    'Pāenga-whāwhā', // april
+    'Haratua', // may
+    'Pīpiri', // june
+    'Hōngongoi', // july
+    'Here-turi-kōkā', // august
+    'Mahuru', // september
+    'Whiringa-ā-nuku', // october
+    'Whiringa-ā-rangi', // november
+    'Hakihea', // december
   ],
   'SHORTMONTHS': <dynamic>[
     'jan.',
@@ -288,8 +288,8 @@ class _MiMaterialLocalizationsDelegate
         // this map and the only way to work around this is to use a listed
         // locale's NumberFormat symbols. So, here we use the number formats
         // for 'en_US' instead.
-        decimalFormat: intl.NumberFormat('#,##0.###', 'en_US'),
-        twoDigitZeroPaddedFormat: intl.NumberFormat('00', 'en_US'),
+        decimalFormat: intl.NumberFormat('#,##0.###', 'en_NZ'),
+        twoDigitZeroPaddedFormat: intl.NumberFormat('00', 'en_NZ'),
         // DateFormat here will use the symbols and patterns provided in the
         // `date_symbol_data_custom.initializeDateFormattingCustom` call above.
         // However, an alternative is to simply use a supported locale's
@@ -342,108 +342,139 @@ class MiMaterialLocalizations extends GlobalMaterialLocalizations {
 // #docregion Getters
 // r'More'
   @override
-  String get moreButtonTooltip => r'More';
+  String get moreButtonTooltip => r'Ētahi atu';
 
 // r'About $applicationName'
   @override
-  String get aboutListTileTitleRaw => r'About $applicationName';
+  String get aboutListTileTitleRaw => r'Mō $applicationName';
 
 // r'Alert'
   @override
-  String get alertDialogLabel => r'Alert';
+  String get alertDialogLabel => r'Matohi';
 // #enddocregion Getters
 
+//r'AM'
   @override
   String get anteMeridiemAbbreviation => r'AM';
 
+//r'Back'
   @override
-  String get backButtonTooltip => r'Back';
+  String get backButtonTooltip => r'Whakamuri';
 
+// r'CANCEL'
   @override
-  String get cancelButtonLabel => r'CANCEL';
+  String get cancelButtonLabel => r'Whakakore';
 
+// r'CLOSE'
   @override
-  String get closeButtonLabel => r'CLOSE';
+  String get closeButtonLabel => r'KATIA';
 
+// r'Close'
   @override
-  String get closeButtonTooltip => r'Close';
+  String get closeButtonTooltip => r'Katia';
 
+// r'Expand'
   @override
-  String get collapsedIconTapHint => r'Expand';
+  String get collapsedIconTapHint => r'Whakanuia';
 
+// r'CONTINUE'
   @override
-  String get continueButtonLabel => r'CONTINUE';
+  String get continueButtonLabel => r'TONU';
 
+// r'COPY'
   @override
-  String get copyButtonLabel => r'COPY';
+  String get copyButtonLabel => r'KAUPAPA';
 
+// r'CUT'
   @override
-  String get cutButtonLabel => r'CUT';
+  String get cutButtonLabel => r'KAUPAPA';
 
+// r'Delete'
   @override
   String get deleteButtonTooltip => r'Delete';
 
+// r'Dialog'
   @override
   String get dialogLabel => r'Dialog';
 
+// r'Navigation menu'
   @override
   String get drawerLabel => r'Navigation menu';
 
+// r'Collapse'
   @override
   String get expandedIconTapHint => r'Collapse';
 
+// r'First page'
   @override
   String get firstPageTooltip => r'First page';
 
+// r'Hide accounts'
   @override
   String get hideAccountsLabel => r'Hide accounts';
 
+// r'Last page'
   @override
   String get lastPageTooltip => r'Last page';
 
+// r'Licenses'
   @override
   String get licensesPageTitle => r'Licenses';
 
+// r'Dismiss'
   @override
   String get modalBarrierDismissLabel => r'Dismiss';
 
+// r'Next month'
   @override
   String get nextMonthTooltip => r'Next month';
 
+// r'Next page'
   @override
   String get nextPageTooltip => r'Next page';
 
+// r'OK'
   @override
   String get okButtonLabel => r'OK';
 
+// r'Custom Navigation Menu Tooltip'
   @override
   // A custom drawer tooltip message.
   String get openAppDrawerTooltip => r'Custom Navigation Menu Tooltip';
 
 // #docregion Raw
+
+// r'$firstRow–$lastRow of $rowCount'
   @override
   String get pageRowsInfoTitleRaw => r'$firstRow–$lastRow of $rowCount';
 
+// r'$firstRow–$lastRow of about $rowCount'
   @override
   String get pageRowsInfoTitleApproximateRaw =>
       r'$firstRow–$lastRow of about $rowCount';
 // #enddocregion Raw
 
+// r'PASTE'
   @override
   String get pasteButtonLabel => r'PASTE';
 
+// r'Popup menu'
   @override
   String get popupMenuLabel => r'Popup menu';
 
+// r'PM'
   @override
   String get postMeridiemAbbreviation => r'PM';
 
+// r'Previous month'
   @override
   String get previousMonthTooltip => r'Previous month';
 
+// r'Previous page'
   @override
   String get previousPageTooltip => r'Previous page';
 
+// r'Refresh'
   @override
   String get refreshIndicatorSemanticLabel => r'Refresh';
 
@@ -453,9 +484,11 @@ class MiMaterialLocalizations extends GlobalMaterialLocalizations {
   @override
   String? get remainingTextFieldCharacterCountMany => null;
 
+// r'1 character remaining'
   @override
   String get remainingTextFieldCharacterCountOne => r'1 character remaining';
 
+// r'$remainingCount characters remaining'
   @override
   String get remainingTextFieldCharacterCountOther =>
       r'$remainingCount characters remaining';
@@ -463,36 +496,47 @@ class MiMaterialLocalizations extends GlobalMaterialLocalizations {
   @override
   String? get remainingTextFieldCharacterCountTwo => null;
 
+// r'No characters remaining'
   @override
   String get remainingTextFieldCharacterCountZero => r'No characters remaining';
 
+// r'Move down'
   @override
   String get reorderItemDown => r'Move down';
 
+// r'Move left'
   @override
   String get reorderItemLeft => r'Move left';
 
+// r'Move right'
   @override
   String get reorderItemRight => r'Move right';
 
+// r'Move to the end'
   @override
   String get reorderItemToEnd => r'Move to the end';
 
+// r'Move to the start'
   @override
   String get reorderItemToStart => r'Move to the start';
 
+// r'Move up'
   @override
   String get reorderItemUp => r'Move up';
 
+// r'Rows per page:'
   @override
   String get rowsPerPageTitle => r'Rows per page:';
 
+// ScriptCategory.englishLike
   @override
   ScriptCategory get scriptCategory => ScriptCategory.englishLike;
 
+// r'Search'
   @override
   String get searchFieldLabel => r'Search';
 
+// r'SELECT ALL'
   @override
   String get selectAllButtonLabel => r'SELECT ALL';
 
@@ -502,127 +546,166 @@ class MiMaterialLocalizations extends GlobalMaterialLocalizations {
   @override
   String? get selectedRowCountTitleMany => null;
 
+// r'1 item selected'
   @override
   String get selectedRowCountTitleOne => r'1 item selected';
 
+// r'$selectedRowCount items selected'
   @override
   String get selectedRowCountTitleOther => r'$selectedRowCount items selected';
 
   @override
   String? get selectedRowCountTitleTwo => null;
 
+// r'No items selected'
   @override
   String get selectedRowCountTitleZero => r'No items selected';
 
+// r'Show accounts'
   @override
   String get showAccountsLabel => r'Show accounts';
 
+// r'Show menu'
   @override
   String get showMenuTooltip => r'Show menu';
 
+// r'Signed in'
   @override
   String get signedInLabel => r'Signed in';
 
+// r'Tab $tabIndex of $tabCount'
   @override
   String get tabLabelRaw => r'Tab $tabIndex of $tabCount';
 
+// TimeOfDayFormat.h_colon_mm_space_a
   @override
   TimeOfDayFormat get timeOfDayFormatRaw => TimeOfDayFormat.h_colon_mm_space_a;
 
+// r'Select hours'
   @override
   String get timePickerHourModeAnnouncement => r'Select hours';
 
+// r'Select minutes'
   @override
   String get timePickerMinuteModeAnnouncement => r'Select minutes';
 
+// r'VIEW LICENSES'
   @override
   String get viewLicensesButtonLabel => r'VIEW LICENSES';
 
+// const <String>['S', 'M', 'T', 'W', 'T', 'F', 'S']
   @override
   List<String> get narrowWeekdays =>
       const <String>['S', 'M', 'T', 'W', 'T', 'F', 'S'];
 
+// 0
   @override
   int get firstDayOfWeekIndex => 0;
 
   static const LocalizationsDelegate<MaterialLocalizations> delegate =
       _MiMaterialLocalizationsDelegate();
 
+// r'Switch to calendar'
   @override
   String get calendarModeButtonLabel => r'Switch to calendar';
 
+// r'mm/dd/yyyy'
   @override
   String get dateHelpText => r'mm/dd/yyyy';
 
+// r'Enter Date'
   @override
   String get dateInputLabel => r'Enter Date';
 
+// r'Out of range.'
   @override
   String get dateOutOfRangeLabel => r'Out of range.';
 
+// r'SELECT DATE'
   @override
   String get datePickerHelpText => r'SELECT DATE';
 
+// r'End date $fullDate'
   @override
   String get dateRangeEndDateSemanticLabelRaw => r'End date $fullDate';
 
+// r'End Date'
   @override
   String get dateRangeEndLabel => r'End Date';
 
+// 'SELECT RANGE'
   @override
   String get dateRangePickerHelpText => 'SELECT RANGE';
 
+// 'Start date \$fullDate'
   @override
   String get dateRangeStartDateSemanticLabelRaw => 'Start date \$fullDate';
 
+// 'Start Date'
   @override
   String get dateRangeStartLabel => 'Start Date';
 
+// '/'
   @override
   String get dateSeparator => '/';
 
+// 'Switch to dial picker mode'
   @override
   String get dialModeButtonLabel => 'Switch to dial picker mode';
 
+// 'Switch to input'
   @override
   String get inputDateModeButtonLabel => 'Switch to input';
 
+// 'Switch to text input mode'
   @override
   String get inputTimeModeButtonLabel => 'Switch to text input mode';
 
+// 'Invalid format.'
   @override
   String get invalidDateFormatLabel => 'Invalid format.';
 
+// 'Invalid range.'
   @override
   String get invalidDateRangeLabel => 'Invalid range.';
 
+// 'Enter a valid time'
   @override
   String get invalidTimeLabel => 'Enter a valid time';
 
+// '\$licenseCount licenses'
   @override
   String get licensesPackageDetailTextOther => '\$licenseCount licenses';
 
+// SAVE
   @override
   String get saveButtonLabel => 'SAVE';
 
+// Select year
   @override
   String get selectYearSemanticsLabel => 'Select year';
 
+// SELECT TIME
   @override
   String get timePickerDialHelpText => 'SELECT TIME';
 
+// 'Hour'
   @override
   String get timePickerHourLabel => 'Hour';
 
+// 'ENTER TIME'
   @override
   String get timePickerInputHelpText => 'ENTER TIME';
 
+// 'Minute'
   @override
   String get timePickerMinuteLabel => 'Minute';
 
+// 'Date'
   @override
   String get unspecifiedDate => 'Date';
 
+// 'Date Range'
   @override
   String get unspecifiedDateRange => 'Date Range';
 }
