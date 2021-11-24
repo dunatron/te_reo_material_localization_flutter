@@ -9,12 +9,12 @@ import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_localizations/flutter_localizations.dart';
 
-/// A custom set of date patterns for the `nn` locale.
+/// A custom set of date patterns for the `mi` locale.
 ///
 /// These are not accurate and are just a clone of the date patterns for the
 /// `no` locale to demonstrate how one would write and use custom date patterns.
 // #docregion Date
-const nnLocaleDatePatterns = {
+const miLocaleDatePatterns = {
   'd': 'd.',
   'E': 'ccc',
   'EEEE': 'cccc',
@@ -62,13 +62,13 @@ const nnLocaleDatePatterns = {
   'ZZZZ': 'ZZZZ',
 };
 
-/// A custom set of date symbols for the `nn` locale.
+/// A custom set of date symbols for the `mi` locale.
 ///
 /// These are not accurate and are just a clone of the date symbols for the
 /// `no` locale to demonstrate how one would write and use custom date symbols.
 // #docregion Date2
-const nnDateSymbols = {
-  'NAME': 'nn',
+const miDateSymbols = {
+  'NAME': 'mi',
   'ERAS': <dynamic>[
     'f.Kr.',
     'e.Kr.',
@@ -107,32 +107,32 @@ const nnDateSymbols = {
     'D',
   ],
   'MONTHS': <dynamic>[
-    'januar',
-    'februar',
-    'mars',
-    'april',
-    'mai',
-    'juni',
-    'juli',
-    'august',
-    'september',
-    'oktober',
-    'november',
-    'desember',
+    'Kohitātea', // january
+    'Hui-tanguru', // february
+    'mars', // march
+    'april', // april
+    'mai', // may
+    'juni', // june
+    'juli', // july
+    'august', // august
+    'september', // september
+    'oktober', // october
+    'november', // november
+    'desember', // december
   ],
   'STANDALONEMONTHS': <dynamic>[
-    'januar',
-    'februar',
-    'mars',
-    'april',
-    'mai',
-    'juni',
-    'juli',
-    'august',
-    'september',
-    'oktober',
-    'november',
-    'desember',
+    'Kohitātea', // january
+    'Hui-tanguru', // february
+    'mars', // march
+    'april', // april
+    'mai', // may
+    'juni', // june
+    'juli', // july
+    'august', // august
+    'september', // september
+    'oktober', // october
+    'november', // november
+    'desember', // december
   ],
   'SHORTMONTHS': <dynamic>[
     'jan.',
@@ -163,22 +163,22 @@ const nnDateSymbols = {
     'des',
   ],
   'WEEKDAYS': <dynamic>[
-    'søndag',
-    'mandag',
-    'tirsdag',
-    'onsdag',
-    'torsdag',
-    'fredag',
-    'lørdag',
+    'Rātapu', // sunday
+    'Rāhina', // Monday
+    'Rātū', // tuesday
+    'Rāapa', // wednsday
+    'Rāpare', //thursday
+    'Rāmere', // friday
+    'Rāhoroi', // saturday
   ],
   'STANDALONEWEEKDAYS': <dynamic>[
-    'søndag',
-    'mandag',
-    'tirsdag',
-    'onsdag',
-    'torsdag',
-    'fredag',
-    'lørdag',
+    'Rātapu', // sunday
+    'Rāhina', // Monday
+    'Rātū', // tuesday
+    'Rāapa', // wednsday
+    'Rāpare', //thursday
+    'Rāmere', // friday
+    'Rāhoroi', // saturday
   ],
   'SHORTWEEKDAYS': <dynamic>[
     'søn.',
@@ -260,27 +260,27 @@ const nnDateSymbols = {
 };
 
 // #docregion Delegate
-class _NnMaterialLocalizationsDelegate
+class _MiMaterialLocalizationsDelegate
     extends LocalizationsDelegate<MaterialLocalizations> {
-  const _NnMaterialLocalizationsDelegate();
+  const _MiMaterialLocalizationsDelegate();
 
   @override
-  bool isSupported(Locale locale) => locale.languageCode == 'nn';
+  bool isSupported(Locale locale) => locale.languageCode == 'mi';
 
   @override
   Future<MaterialLocalizations> load(Locale locale) async {
     final String localeName = intl.Intl.canonicalizedLocale(locale.toString());
 
-    // The locale (in this case `nn`) needs to be initialized into the custom
+    // The locale (in this case `mi`) needs to be initialized into the custom
     // date symbols and patterns setup that Flutter uses.
     date_symbol_data_custom.initializeDateFormattingCustom(
       locale: localeName,
-      patterns: nnLocaleDatePatterns,
-      symbols: intl.DateSymbols.deserializeFromMap(nnDateSymbols),
+      patterns: miLocaleDatePatterns,
+      symbols: intl.DateSymbols.deserializeFromMap(miDateSymbols),
     );
 
     return SynchronousFuture<MaterialLocalizations>(
-      NnMaterialLocalizations(
+      MiMaterialLocalizations(
         localeName: localeName,
         // The `intl` library's NumberFormat class is generated from CLDR data
         // (see https://github.com/dart-lang/intl/blob/master/lib/number_symbols_data.dart).
@@ -306,17 +306,17 @@ class _NnMaterialLocalizationsDelegate
   }
 
   @override
-  bool shouldReload(_NnMaterialLocalizationsDelegate old) => false;
+  bool shouldReload(_MiMaterialLocalizationsDelegate old) => false;
 }
 // #enddocregion Delegate
 
-/// A custom set of localizations for the 'nn' locale. In this example, only
+/// A custom set of localizations for the 'mi' locale. In this example, only
 /// the value for openAppDrawerTooltip was modified to use a custom message as
 /// an example. Everything else uses the American English (en_US) messages
 /// and formatting.
-class NnMaterialLocalizations extends GlobalMaterialLocalizations {
-  const NnMaterialLocalizations({
-    String localeName = 'nn',
+class MiMaterialLocalizations extends GlobalMaterialLocalizations {
+  const MiMaterialLocalizations({
+    String localeName = 'mi',
     required intl.DateFormat fullYearFormat,
     required intl.DateFormat compactDateFormat,
     required intl.DateFormat shortDateFormat,
@@ -340,12 +340,15 @@ class NnMaterialLocalizations extends GlobalMaterialLocalizations {
         );
 
 // #docregion Getters
+// r'More'
   @override
   String get moreButtonTooltip => r'More';
 
+// r'About $applicationName'
   @override
   String get aboutListTileTitleRaw => r'About $applicationName';
 
+// r'Alert'
   @override
   String get alertDialogLabel => r'Alert';
 // #enddocregion Getters
@@ -543,7 +546,7 @@ class NnMaterialLocalizations extends GlobalMaterialLocalizations {
   int get firstDayOfWeekIndex => 0;
 
   static const LocalizationsDelegate<MaterialLocalizations> delegate =
-      _NnMaterialLocalizationsDelegate();
+      _MiMaterialLocalizationsDelegate();
 
   @override
   String get calendarModeButtonLabel => r'Switch to calendar';
